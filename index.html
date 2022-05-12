@@ -1,11 +1,18 @@
 <html>
 <head></head>
 <body>
- <a id="kakao-link-btn" href="javascript:sendLink()">
-  <img
-    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-  />
-</a>
+ <div>
+	<h3>넷플릭스방</h3>
+ 	<a id="netflix-link-btn" href="javascript:sendNetflixLink()">
+  		<img width="150" height="150" src="images/netflix.png" />
+	</a>
+</div>
+ <div>
+	<h3>왓챠방</h3>
+ 	<a id="watcha-link-btn" href="javascript:sendWatchaLink()">
+  		<img width="150" height="150" src="images/watcha.jpg" />
+	</a>
+</div>
 
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script type='text/javascript'>
@@ -14,10 +21,16 @@
     Kakao.init('bce8d2f9ff87d395156c1cf96f071d6f');
     Kakao.isInitialized();
     // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-    function sendLink() {
-    Kakao.Link.sendCustom({
-        templateId : 76465
-    });
+    function sendNetflixLink() {
+    	Kakao.Link.sendCustom({
+        		templateId : 76465
+    	});
+    }
+ 
+    function sendWatchaLink() {
+    	Kakao.Link.sendCustom({
+        		templateId : 76483
+    	});
     }
     //]]>
 </script>
